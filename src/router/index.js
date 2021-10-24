@@ -36,7 +36,15 @@ export const constantRoutes = [
     component: () => import('@/views/login/index'),
     hidden: true
   },
-
+  {
+    path: '/playlist',
+    component: Layout,
+    hidden: true,
+    children: [
+      { path: 'list', component: () => import('@/views/playlist/list'), meta: { title: '歌单管理', icon: 'table' }}
+      // { path: 'list', component: () => import('@/view/playlist/list') }
+    ]
+  },
   {
     path: '/404',
     component: () => import('@/views/404'),
