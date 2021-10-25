@@ -53,13 +53,10 @@ export default {
     this.getList()
   },
   mounted() {
-    console.log(scroll)
     scroll.start(this.getList)
   },
   methods: {
     getList() {
-      console.log('getList 运行了')
-      console.log(this.loading)
       this.loading = true
       fetchList({
         start: this.playlist.length,
