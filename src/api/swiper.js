@@ -15,3 +15,4 @@ export function del(params) {
     method: "get"
   });
 }
+
